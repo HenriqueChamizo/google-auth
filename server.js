@@ -49,7 +49,6 @@ passport.use(
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL: "/auth/google/callback",
-      callbackURL: "/auth/google/callback",
       scope: [
         "profile",
         "email",
@@ -290,5 +289,5 @@ app.post("/create-event", authenticateJWT, async (req, res) => {
 // Inicia o servidor
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em ${PORT}`);
 });
