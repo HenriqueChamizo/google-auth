@@ -109,6 +109,11 @@ passport.deserializeUser((user, done) => {
 
 // Rota de autenticação no Google
 app.get(
+  "/",
+  (req, res, next) => { res.send("Tela Inicial"); return next(); }
+);
+// Rota de autenticação no Google
+app.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["profile", "email"] })
 );
